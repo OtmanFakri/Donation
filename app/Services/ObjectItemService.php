@@ -38,7 +38,6 @@ class ObjectItemService
 
         $storedImages = SoterImage::storeImages($objectItemDTO->item->image_path);
 
-        $storedImages = SoterImage::uploadImage($objectItemDTO->item->image_path);
 
         $imagesData = [];
         foreach ($storedImages as $storedImage) {

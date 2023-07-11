@@ -5,6 +5,7 @@ use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\FoodItemController;
 use App\Http\Controllers\API\ObjectItemController;
 use App\Http\Controllers\API\ReviewController;
+use App\Http\Middleware\CheckCoins;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -46,7 +47,8 @@ Route::get('/test', function () {
 //ObjectItem
 Route::get('/ObjectItem', [ObjectItemController::class, 'index']);
 Route::get('/ObjectItem/{id}', [ObjectItemController::class, 'show']);
-Route::post('/ObjectItem', [ObjectItemController::class, 'store']);
+Route::post('/ObjectItem', [ObjectItemController::class, 'store'])
+    ->middleware([checkCoins::class, 'auth:api']);
 Route::put('/ObjectItem/{id}', [ObjectItemController::class, 'update']);
 Route::delete('/ObjectItem/{id}', [ObjectItemController::class, 'destroy']);
 Route::get('/Objectme', [ObjectItemController::class, 'getObjectItembyme']);
@@ -54,7 +56,8 @@ Route::get('/Objectme', [ObjectItemController::class, 'getObjectItembyme']);
 //FoodItem
 Route::get('/FoodItem', [FoodItemController::class, 'index']);
 Route::get('/FoodItem/{id}', [FoodItemController::class, 'show']);
-Route::post('/FoodItem', [FoodItemController::class, 'store']);
+Route::post('/FoodItem', [FoodItemController::class, 'store'])
+    ->middleware(checkCoins::class );
 Route::put('/FoodItem/{id}', [FoodItemController::class, 'update']);
 Route::delete('/FoodItem/{id}', [FoodItemController::class, 'destroy']);
 Route::get('/Foodme', [FoodItemController::class, 'getFoodItembyme']);

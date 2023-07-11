@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39d41ffb-2e3b-4d47-9716-ca646f3bd51d" name="Changes" comment="" />
+    <list default="true" id="39d41ffb-2e3b-4d47-9716-ca646f3bd51d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckCoins.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/EjZOalgCviACOBPn0snwviHiwCuWHMLrDyCvHgvg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/QOxGFscXHtxpZ0hVoraK9EietXGrCYvlrlFPEAsL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/Sh1QzJacfc1KVqkdG1bWQxSyLN144iMSJd7d6GPn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/fUdHwOOY4P9ZGz2KBTBzvVfYV7sbNik9IdeTEaPj.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/jv51Prr0sVskB0QPNTVQPpprvCGK76vf2zPp4afj.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/nEQYtqn6eOK8Rbr9fvKTi13KHWxQ7izncywnJQA2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/oMbSdXKOrIDy59TwzMC1hfua1Tpu3adUJuZXFCHO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/psfDWvKEYsUJ0JF9DyKALq0niw5F7y7HdcoOGQmB.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/pzobYYj1xpgDGas1Anex6gkifsgXarDjX39eaJVG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sWkcYj8DMgkfEQNA9OYATEJ8Ac8vy1as353EVSZA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/uw8HkccVAihL8xLqdRCbYmv6hJX7pQzswyjCbtsT.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_7_11_23__9_31_AM.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5185c906-c404-4bd4-931a-c432784a0a73.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5185c906-c404-4bd4-931a-c432784a0a73/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5185c906-c404-4bd4-931a-c432784a0a73/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5185c906-c404-4bd4-931a-c432784a0a73/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5185c906-c404-4bd4-931a-c432784a0a73/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ugive-dotation_api.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/ObjectItemService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ObjectItemService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +41,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -140,12 +174,16 @@
     </include_path>
   </component>
   <component name="ProjectId" id="2SQbzjkTUmt4SMZdLQ5nqAHmMtS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -173,11 +211,25 @@
       <option name="presentableId" value="Default" />
       <updated>1689082024934</updated>
       <workItem from="1689082032240" duration="719000" />
-      <workItem from="1689098156311" duration="1569000" />
+      <workItem from="1689098156311" duration="3668000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
