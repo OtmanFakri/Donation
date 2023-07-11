@@ -1,0 +1,377 @@
+/* 
+------------------------------------------
+   ------------------------------------------
+
+Template Name: " "
+Template URI: http://webcode4u.com
+Description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit..."
+Author: Al Amin Sobuj
+Author URI: http://webcode4u.com
+Version: 1.0
+
+------------------------------------------
+   ------------------------------------------
+@File: Tamplate Styles
+
+* This file contains the styling for the actual theme, this
+is the file you need to edit to change the look of the
+theme.
+
+This files contents are outlined below>>>>>
+
+------------------------------------------
+   ------------------------------------------
+
+** - INDEX PAGE CSS
+
+** - Default CSS
+** - 
+** - 
+** - 
+** - 
+** - 
+** - 
+** - 
+** - 
+** - 
+** - 
+** - 
+** - 
+** - 
+** - 
+** - 
+** - 
+------------------------------------------
+   ------------------------------------------
+*/
+
+
+*{padding:0; margin:0;}
+a, 
+a:active, 
+a:focus, 
+a:hover{
+  outline:none;
+  text-decoration:none;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 15px;
+}
+p {
+  margin: 0 0 15px;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+body{
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  max-width: 100%;
+  background-color: #F2F2F2;
+}
+.container{
+  max-width: 1200px;
+}
+.spacing {
+  padding: 50px 0;
+}
+/*
+  Default Form
+=================*/
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="submit"], 
+input[type="search"], 
+button[type="submit"],
+textarea {
+  border: 1px solid #e1e1e1;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 12px 15px;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  width: 100%;
+  min-height: 45px;
+  margin-bottom: 15px;
+  outline: none;
+}
+input[type="submit"],
+button[type="submit"]{
+  cursor: pointer;
+}
+
+input:focus, 
+textarea:focus {
+  border: 1px solid #6FBC29;
+}
+
+textarea {
+  min-height: 170px;
+}
+
+input::-moz-placeholder {
+  color: #262626;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+input:-ms-input-placeholder {
+  color: #262626;
+}
+
+input::-webkit-input-placeholder {
+  color: #262626;
+}
+/*Navigation*/
+
+.navbar-wrap {
+    justify-content: space-between;
+    align-items: center;
+}
+
+form.d-flex input, form.d-flex button {
+    margin-bottom: 0;
+}
+
+form.d-flex button {
+    width: auto;
+}
+.form-control:focus, .btn-check:focus+.btn, .btn:focus {
+    box-shadow: none;
+    border-color: #e1e1e1;
+}
+
+button.btn {
+    background: #fff;
+}
+
+form.d-flex.search-form {
+    min-width: 350px;
+    position: relative;
+}
+
+form.d-flex.search-form button.btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: none;
+    background: transparent;
+}
+
+form.d-flex.search-form input.form-control {
+    padding-left: 45px;
+    border-radius: 10px;
+}
+
+a.navbar-brand {
+    margin-right: 85px;
+}
+
+ul.navbar-nav li:not(:last-child) {
+    margin-right: 10px;
+}
+dl, ol, ul {padding: 0;margin: 0;}
+
+
+
+/*Ugive Button*/
+
+.ugive-btn {
+    min-width: 150px;
+    text-align: center;
+    border: 2px solid #BA3127;
+    display: inline-block;
+    border-radius: 10px;
+    color: #BA3127;
+    padding: 10px 15px;
+}
+
+.ugive-btn:hover,
+.ugive-btn-solid {
+    background: #BA3127;
+    color: #fff !important;
+}
+
+.btn-inline a:not(:last-child) {
+    margin-right: 10px;
+}
+
+h1.title-h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+
+#hero {
+  padding: 120px 0;
+}
+
+
+/*Product Cars Style*/
+.product-box {
+    background: #fff;
+}
+
+.product-box__image img {width: 100%;}
+
+.product-box__content {
+    text-align: center;
+    padding: 25px 15px;
+}
+
+ul.product-metabox {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul.product-metabox li {
+    display: block;
+    width: 33.33%;
+}
+
+h3.product-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+a.product-title {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #000;
+    font-weight: 600;
+}
+
+a.product-title:hover {
+    color: #BA3127;
+}
+
+.product-box__content {
+}
+
+.product-box {
+    border-radius: 7px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.metabox-icon {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+ul.product-metabox li:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
+h2.title-h2 {
+    position: relative;
+    padding-bottom: 15px;
+    color: #BA3127;
+}
+
+h2.title-h2:after {
+    content: "";
+    height: 3px;
+    width: 60px;
+    background: #BA3127;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+h3.title-h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.image-box__content {
+    margin: 20px 0;
+}
+
+/*CTA*/
+.cta-wrap {
+    background: #BA3127;
+    padding-right: 0;
+    padding-left: 60px;
+    padding-bottom: 0;
+    padding-top: 65px;
+    border-radius: 20px;
+}
+
+.cta-shape-wrap {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px;
+}
+
+/*Footer*/
+footer {
+    background: #1E2833;
+}
+.footer-bottom {
+    padding: 20px 0;
+}
+
+.footer-top {
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-top: 50px;
+    position: relative;
+}
+
+.footer-top:after {
+    content: "";
+    height: 100%;
+    width: 1px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .1;
+}
+ul.footer-nav li a {
+    display: block;
+    color: #fff;
+}
+
+ul.footer-nav li a:hover {
+    color: #BA3127;
+}
+
+.social-midea a {
+    display: inline-flex;
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #BA3127;
+    color: #BA3127;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    border-radius: 45px;
+}
+
+.social-midea a:hover {
+    background: #BA3127;
+    color: #fff;
+}
+
+
+
+
+

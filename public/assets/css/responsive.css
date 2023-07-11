@@ -1,0 +1,56 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+ 
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+
+   
+    
+ }
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+    .row.col-rev {flex-direction: column-reverse;}
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+
+ }
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 990px) { 
+  ul.navbar-nav {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none !important;
+  }
+
+  #hero, .spacing {
+    padding: 50px 0;
+  }
+
+  .cta-wrap.text-white {
+    padding: 30px 30px 0 30px;
+  }
+
+  .cta-shape-wrap {
+    padding-right: 0;
+    padding-top: 20px;
+  }
+
+  a.btn-store {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 0 !important;
+    max-width: 150px;
+  }
+  .footer-top:after {
+    display: none;
+  }
+  .subscribe-btn, .footer-widget {margin-top: 10px;}
+  .navbar-light .navbar-toggler {border: none;padding: 0;}
+}
