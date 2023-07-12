@@ -21,6 +21,11 @@ class Item extends Model
         'score_cost',
     ];
 
+    public function Chat()
+    {
+        return $this->hasMany(Chat::class);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');

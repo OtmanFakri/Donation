@@ -28,6 +28,13 @@ class User extends Authenticatable implements MustVerifyEmail, JWTSubject
         'email_verified_at' => 'datetime',
     ];
 
+    public function Chat()
+    {
+        return $this->hasMany(Chat::class);
+    }
+
+
+
     public function items()
     {
         return $this->hasMany(Item::class);

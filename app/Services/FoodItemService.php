@@ -125,6 +125,7 @@ class FoodItemService
         $foodItems = Item::where('user_id', auth()->id())
             ->whereHas('foodItem')
             ->with('foodItem')
+            ->with('Chat')
             ->get();
         return $foodItems;
     }

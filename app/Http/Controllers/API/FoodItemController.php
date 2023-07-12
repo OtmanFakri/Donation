@@ -38,7 +38,6 @@ class FoodItemController extends Controller
         $items = $this->ItemService->findAll();
         $items->load([
             'item.itemImages',
-
         ]);
 
         return response()->json($items);
