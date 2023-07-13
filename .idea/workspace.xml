@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39d41ffb-2e3b-4d47-9716-ca646f3bd51d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/API/ChatController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Chat.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2023_07_12_135452_create_chats_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca516681-1cf0-4fe8-a673-562cbadf0f86.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca516681-1cf0-4fe8-a673-562cbadf0f86.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/FoodItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/FoodItemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +184,8 @@
       <updated>1689082024934</updated>
       <workItem from="1689082032240" duration="719000" />
       <workItem from="1689098156311" duration="4330000" />
-      <workItem from="1689168853626" duration="4112000" />
+      <workItem from="1689168853626" duration="4869000" />
+      <workItem from="1689263716356" duration="798000" />
     </task>
     <servers />
   </component>
