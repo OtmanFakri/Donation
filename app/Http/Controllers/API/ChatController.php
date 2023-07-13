@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Events\NewMessage;
 use App\Http\Controllers\Controller;
 use App\Models\Item;
+use Illuminate\Support\Facades\Mail;
 
 class ChatController extends Controller
 {
@@ -33,6 +35,11 @@ class ChatController extends Controller
         ]);
         $data['user_id'] = $user->id;
         $chat = $user->Chat()->create($data);
+
+        //Dispatching the event
+        event(new NewMessage($chat));
+
+
         return response()->json($chat, 201);
     }
 }
