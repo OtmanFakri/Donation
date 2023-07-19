@@ -21,6 +21,11 @@ class Item extends Model
         'score_cost',
     ];
 
+
+    public function orders()
+    {
+        return $this->hasMany(Orders::class, 'item_id');
+    }
     public function Chat()
     {
         return $this->hasMany(Chat::class);

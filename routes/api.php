@@ -74,9 +74,19 @@ Route::controller(ReviewController::class)->group(function () {
     Route::post('/review', 'store');
     Route::delete('/review/{review}', 'destroy');
 });
-
+//Chats
 Route::controller(\App\Http\Controllers\API\ChatController::class)->group(function () {
     Route::get('/chat', 'index');
     Route::post('/chat', 'store');
     Route::delete('/chat/{chat}', 'destroy');
+});
+
+//Orders
+Route::controller(\App\Http\Controllers\API\OrdersController::class)->group(function () {
+    Route::get('/order', 'index');
+    Route::get('/receivedOrders', 'receivedOrders');
+    Route::get('/order/{order}', 'show');
+    Route::post('/order', 'store');
+    Route::put('/updateStatus/{order}', 'updateStatus');
+    Route::delete('/order/{order}', 'destroy');
 });
