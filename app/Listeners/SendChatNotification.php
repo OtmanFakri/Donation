@@ -33,7 +33,6 @@ class SendChatNotification
         Mail::send('emails.new_Message', ['Chat' => $chat], function ($message) use ($chat) {
             $message->to($chat->item->user->email)
                 ->subject('New Message: '.$chat->item->name);
-            print "Event has been sent!";
         });
 
     }

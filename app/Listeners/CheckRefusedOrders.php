@@ -4,8 +4,10 @@ namespace App\Listeners;
 
 use App\Events\OrderStatusUpdated;
 use App\Models\Orders;
+use App\Models\User;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Facades\Log;
 
 class CheckRefusedOrders
 {
@@ -28,20 +30,38 @@ class CheckRefusedOrders
     public function handle(OrderStatusUpdated $event)
     {
         $order = $event->order;
+
+        if (!$order) {
+            Log::error('Order not found: ' . $event->order->id);
+            return; // You can handle this case appropriately, like returning an error response.
+        }
+
+        // Get the item_id and user_id from the updated order
         $item_id = $order->item_id;
         $user_id = $order->user_id;
 
-        // Find other orders with the same item and user that have a status of "refused"
-        $refusedOrders = Orders::where('item_id', $item_id)
-            ->where('user_id', $user_id)
-            ->where('status', 'refused')
-            ->get();
+        // Find the user
+        $user = User::find($user_id);
 
-        // Update the status of refused orders to "pending" or any other appropriate status
-        foreach ($refusedOrders as $refusedOrder) {
-            $refusedOrder->update(['status' => 'pending']);
+        // If the order status is accepted
+        if ($order->status === 'accepted') {
+            // Update all other orders for the item to "refused"
+            Orders::where('item_id', $item_id)
+                ->where('id', '!=', $order->id)
+                ->update(['status' => 'refused']);
+        } else {
+            // If the order status is not accepted, make sure there is at least one order with status "accepted"
+            $acceptedOrder = Orders::where('item_id', $item_id)
+                ->where('status', 'accepted')
+                ->first();
+
+            if (!$acceptedOrder) {
+                // If no accepted orders found, update the current order to "accepted"
+                $order->update(['status' => 'accepted']);
+            } else {
+                // If there are already accepted orders, update the current order to "refused"
+                $order->update(['status' => 'refused']);
+            }
         }
-        $message = "Hello, World!";
-        echo $message;
     }
 }

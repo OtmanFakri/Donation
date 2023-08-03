@@ -66,7 +66,11 @@ class OrdersController extends Controller
             'status' => 'required|in:pending,accepted,refused',
         ]);
 
-        $order->update(['status' => $validatedData['status']]);
+        $order->update(
+            [
+
+                'status' => $validatedData['status']]);
+
         event(new OrderStatusUpdated($order));
 
         return response()->json(['message' => 'Order status updated successfully'], Response::HTTP_OK);

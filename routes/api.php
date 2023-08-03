@@ -6,6 +6,7 @@ use App\Http\Controllers\API\FoodItemController;
 use App\Http\Controllers\API\ObjectItemController;
 use App\Http\Controllers\API\ReviewController;
 use App\Http\Middleware\CheckCoins;
+use App\Http\Middleware\CheckItemOwnership;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -87,6 +88,6 @@ Route::controller(\App\Http\Controllers\API\OrdersController::class)->group(func
     Route::get('/receivedOrders', 'receivedOrders');
     Route::get('/order/{order}', 'show');
     Route::post('/order', 'store');
-    Route::put('/updateStatus/{order}', 'updateStatus');
+    Route::put('/updateStatus/{order}', 'updateStatus')->middleware(CheckItemOwnership::class);
     Route::delete('/order/{order}', 'destroy');
 });
