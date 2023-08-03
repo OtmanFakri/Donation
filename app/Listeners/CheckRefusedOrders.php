@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use App\Events\OrderStatusUpdated;
+use App\Models\Item;
 use App\Models\Orders;
 use App\Models\User;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -41,7 +42,10 @@ class CheckRefusedOrders
         $user_id = $order->user_id;
 
         // Find the user
-        $user = User::find($user_id);
+        //$user = User::where('items', $item_id)->first();
+
+        $item = Item::find($item_id);
+        $user = $item->user;
 
         // If the order status is accepted
         if ($order->status === 'accepted') {
@@ -49,17 +53,29 @@ class CheckRefusedOrders
             Orders::where('item_id', $item_id)
                 ->where('id', '!=', $order->id)
                 ->update(['status' => 'refused']);
+
+
         } else {
             // If the order status is not accepted, make sure there is at least one order with status "accepted"
             $acceptedOrder = Orders::where('item_id', $item_id)
                 ->where('status', 'accepted')
                 ->first();
 
+            $user->increment('Coins', 2);
+            $user->save();
+
             if (!$acceptedOrder) {
                 // If no accepted orders found, update the current order to "accepted"
                 $order->update(['status' => 'accepted']);
+
+                $user->increment('Coins', 2);
+                $user->save();
+
+
             } else {
+                //$user->update(['coins' => $user->coins - 2]);
                 // If there are already accepted orders, update the current order to "refused"
+
                 $order->update(['status' => 'refused']);
             }
         }
