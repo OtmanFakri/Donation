@@ -41,5 +41,7 @@ class CheckRefusedOrders
         foreach ($refusedOrders as $refusedOrder) {
             $refusedOrder->update(['status' => 'pending']);
         }
+        $message = "Hello, World!";
+        echo $message;
     }
 }

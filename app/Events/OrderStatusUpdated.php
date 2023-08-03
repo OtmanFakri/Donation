@@ -26,7 +26,9 @@ class OrderStatusUpdated
 
     public function __construct(Orders $order)
     {
+
         $this->order = $order;
+
     }
 
     /**

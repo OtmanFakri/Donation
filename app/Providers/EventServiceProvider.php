@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Events\NewMessage;
+use App\Events\OrderStatusUpdated;
 use App\Listeners\CheckRefusedOrders;
 use App\Listeners\SendChatNotification;
 use Illuminate\Auth\Events\Registered;
@@ -19,7 +21,13 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
+        ],
+        // SendChatNotification::class,
+        //            CheckRefusedOrders::class,
+        \App\Events\NewMessage::class =>[
             SendChatNotification::class,
+        ],
+        OrderStatusUpdated::class =>[
             CheckRefusedOrders::class,
         ],
     ];
@@ -31,6 +39,8 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Event::listen(
+            [CheckRefusedOrders::class, 'handle']
+        );
     }
 }

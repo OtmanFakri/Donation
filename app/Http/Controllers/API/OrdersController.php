@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Events\OrderStatusUpdated;
 use App\Http\Controllers\Controller;
 use App\Models\Item;
 use App\Models\Orders;
@@ -66,6 +67,7 @@ class OrdersController extends Controller
         ]);
 
         $order->update(['status' => $validatedData['status']]);
+        event(new OrderStatusUpdated($order));
 
         return response()->json(['message' => 'Order status updated successfully'], Response::HTTP_OK);
     }
