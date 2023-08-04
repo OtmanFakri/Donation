@@ -18,7 +18,9 @@
         "laravel/framework": "^8.0|^9.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.4",
-        "php-open-source-saver/jwt-auth": "^2.1"
+        "php-open-source-saver/jwt-auth": "^2.1",
+        "paypal/rest-api-sdk-php": "*"
+
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.7",

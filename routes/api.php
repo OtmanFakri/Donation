@@ -91,3 +91,10 @@ Route::controller(\App\Http\Controllers\API\OrdersController::class)->group(func
     Route::put('/updateStatus/{order}', 'updateStatus')->middleware(CheckItemOwnership::class);
     Route::delete('/order/{order}', 'destroy');
 });
+
+//Payment
+Route::controller(\App\Http\Controllers\PaypalPaymentController::class)->group(function () {
+    Route::post('/create-payment', 'cretePayment');
+    Route::get('/payment/success', 'success')->name('payment.success');
+    Route::get('/payment/cancel', 'cancel')->name('payment.cancel');
+});
